@@ -1,14 +1,16 @@
 body{
     background: black;
-    color:#b52b25;
+    color:#9e2722;
     font-family: monospace;
     margin:0;
-    padding: 30px;
+    padding: 25px;
+    text-shadow: 0 0 3px #6e1715; /*blurry effct*/
 }
 
-.screen{
+.terminal{
     max-width: 900px;
     margin:auto;
+    opacity: 0.92;
 }
 
 p{
@@ -25,4 +27,35 @@ body::after{
     height:100%;
     pointer-events:none;
     background: repeating-linear-gradient(Odeg, transparent, transparent px, #6c0601);
+}
+.boot-line{
+    visibility: hidden;
+}
+
+.section{
+    margin-top:27px;
+
+}
+.section h3{
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    font-weight: normal;
+}
+
+td,
+th{
+    padding-right: 35px;
+    font-size:13px
+
+}
+.warning{
+    color:#d8322c;
+    text-shadow:0 0 4px #7a1815
 }
