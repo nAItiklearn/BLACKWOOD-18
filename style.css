@@ -15,3 +15,14 @@ p{
     margin:3px;
     font-size: 15px;
 }
+/*---giving CRT texture--*/
+body::after{
+    content:"";
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background: repeating-linear-gradient(Odeg, transparent, transparent px, #6c0601);
+}
