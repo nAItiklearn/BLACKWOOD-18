@@ -1,0 +1,17 @@
+body{
+    background: black;
+    color:#b52b25;
+    font-family: monospace;
+    margin:0;
+    padding: 30px;
+}
+
+.screen{
+    max-width: 900px;
+    margin:auto;
+}
+
+p{
+    margin:3px;
+    font-size: 15px;
+}
