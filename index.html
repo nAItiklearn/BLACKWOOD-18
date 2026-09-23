@@ -4,6 +4,7 @@
             BLACKWOOD-18
         </title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
 
     <body>
@@ -22,7 +23,7 @@
                 </div>
 
             </div>
-        </div>
+        
 
         <!-- SYSTEM INFO-->
         <div class="section"> 
@@ -119,9 +120,8 @@
             </tbody>
             </table>
         </div>
-        <br>
-        <br>
-        <br>
+        
+        
         <!--BOOT-->
         <div class="boot">
             
@@ -138,10 +138,21 @@
             <p class="boot-line">SYSTEM CHECK COMPLETE</p>
             <br>
             <p class="boot-line warning">SYSTEM CLOCK........ERROR..</p>
-             
+            <div id="corruption"></div>
 
+            <!--terminal interface-->
+            <div id="terminal-interface">
+                <div id="terminal-output"></div>
+                    <div class="command-line">
+                        <span>BLACKWOOD&gt;</span>
+                        <input 
+                        type="text"
+                        id="command-input"
+                        autofocus>
 
+                    </div>
+            </div>
+        </div>
+        </div>
     </body>
-
-    <script src="script.js"></script>
 </html>

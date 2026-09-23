@@ -6,16 +6,23 @@ body{
     padding: 25px;
     text-shadow: 0 0 3px #6e1715; /*blurry effct*/
 }
+.top{
+    
+    margin-bottom: 30px;
+}
+.top div{
+    margin:4px 0;
+}
 
 .terminal{
-    max-width: 900px;
-    margin:auto;
+    max-width: 1000px;
+    margin:0;
     opacity: 0.92;
 }
 
 p{
-    margin:3px;
-    font-size: 15px;
+    margin:1px;
+    font-size: 10px;
 }
 /*---giving CRT texture--*/
 body::after{
@@ -26,20 +33,20 @@ body::after{
     width:100%;
     height:100%;
     pointer-events:none;
-    background: repeating-linear-gradient(Odeg, transparent, transparent px, #6c0601);
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255, 0, 0, 0.03));
 }
 .boot-line{
     visibility: hidden;
 }
 
 .section{
-    margin-top:27px;
+    margin-top:18px;
 
 }
 .section h3{
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 table{
     border-collapse: collapse;
@@ -51,11 +58,51 @@ th{
 
 td,
 th{
-    padding-right: 35px;
-    font-size:13px
+    padding-right: 25px;
+    font-size:10px
 
 }
 .warning{
     color:#d8322c;
-    text-shadow:0 0 4px #7a1815
+    text-shadow:0 0 4px #7e0a0a;
+    font-size:13px;
+}
+
+#corruption p{
+    margin:4px 0;
+    
+}
+.boot{
+    margin-top:25px;
+}
+
+#terminal-interface{
+    font-size: 12px;
+    margin-top: 35px;
+    padding-bottom: 50px;
+    display:none;
+}
+#terminal-output{
+    min-height: 20px;
+    margin-bottom: 7px;
+}
+.command-line{
+    display:20px;
+    align-items: center;
+    width:100%
+}
+.command-line span{
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+#command-input{
+    flex:1;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-family: monospace;
+    font-size: 13px;
+    text-shadow: #6e1715;
+    caret-color: #9e2722;
 }
