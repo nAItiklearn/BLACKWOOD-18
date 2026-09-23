@@ -1,6 +1,8 @@
 # BLACKWOOD-18
 
 A small web project that creates an old corrupted computer terminal.
+Uses dark red CRT-style interface.
+designed to make you feel like you are interacting with a old system terminal
 
 built using HTML, CSS & JavaScript
 
