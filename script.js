@@ -1,4 +1,8 @@
 let lines = document.querySelectorAll(".boot-line");
+let track= new Audio("assets/spooky.wav");
+
+track.loop=true;
+let scareSound=new Audio("assets/laugh.mp3")
 
 let num=0;
 
@@ -40,10 +44,7 @@ showLine();
 const terminal=document.getElementById("terminal-interface");
 const input=document.getElementById("command-input");
 const output =document.getElementById("terminal-output");
-let track= new Audio("assets/spooky.wav");
 
-track.loop=true;
-let scareSound=new Audio("assets/laugh.mp3")
 
 input.addEventListener("keydown",
     function(event){
@@ -94,10 +95,26 @@ function processCommand(command){
         track.pause();
         track.currentTime =0;  //so that it starts from beginning
     }
-    else if(cmd==="audio"){
-        track.play();
-        output.innerHTML+="<p>here you go</p>";
-    }
+    else if (cmd === "audio") {
+
+    track.play()
+        .then(function() {
+
+            output.innerHTML +=
+                "<p>AUDIO PLAYING...</p>";
+
+        })
+
+        .catch(function(error) {
+
+            output.innerHTML +=
+                "<p>AUDIO ERROR: " + error.name + "</p>";
+
+            console.error("Audio error:", error);
+
+        });
+
+}
     else if(cmd==="disturb"){  //will display jumpscare
         let overlay=document.getElementById("jumpscare");
         scareSound.play()
@@ -115,7 +132,7 @@ function processCommand(command){
         output.style.filter="hue-rotate(90deg) blur(0.5px)";
 
         output.innerHTML+=`
-            <p> class="glitch-text" style="color:#ff3333;font-weight:bold;"> >> OPENING FILE: /home/blackwood/journal_backup.log >> CORRUPTION DETECTED: 42% of sectors unreadable. Attempting recovery...</p>
+            <p class="glitch-text" style="color:#ff3333;font-weight:bold;"> >> OPENING FILE: /home/blackwood/journal_backup.log >> CORRUPTION DETECTED: 42% of sectors unreadable. Attempting recovery...</p>
             <p>"[10.31.2004 - 02:14 AM] 
                It isn't a file permission error. I locked the root directory,
                but something is writing to the kernel logs while I'm away from the keyboard. The lines keep repeating:"</p>
