@@ -21,7 +21,7 @@ body{
 }
 
 p{
-    margin:1px;
+    margin:6px 0;
     font-size: 10px;
 }
 /*---giving CRT texture--*/
@@ -85,6 +85,11 @@ th{
 #terminal-output{
     min-height: 20px;
     margin-bottom: 7px;
+    margin-top: 20px;
+}
+#terminal-output p{
+    margin:8px;
+
 }
 .command-line{
     display:20px;
@@ -98,6 +103,7 @@ th{
 
 #command-input{
     flex:1;
+    color:#6e1715;
     background: transparent;
     border:none;
     outline:none;
@@ -105,4 +111,20 @@ th{
     font-size: 13px;
     text-shadow: #6e1715;
     caret-color: #9e2722;
+}
+#jumpscare{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:black;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+#jumpscare image{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
 }
