@@ -6,7 +6,7 @@ designed to make you feel like you are interacting with a old system terminal
 
 built using HTML, CSS & JavaScript
 
-link - https://naitiklearn.github.io/BLACKWOOD-18/
+link - https://naitiklearn.github.io/BLACKWOOD-18-M1/
 
 
 ## features
